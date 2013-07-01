@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+ 
+ //
+ //  quicklook-lightroom
+ //
+ //  Created by Jarno Heikkinen on 6/29/13.
+ //  Copyright (c) 2013 Jarno Heikkinen. All rights reserved.
+ //
+ 
+-->
+<html>
+<head>
+<style>
+    html { background-color: #444; color:white; }
+    body
+    {
+        font-size:0;
+        margin: 8px;
+    }
+
+    div
+    {
+        background-repeat:no-repeat;
+        display: inline-block;
+        margin:5px;
+        padding:0px;
+        width:131px; height:131px;
+        background-color: rgba(0,0,0,0.50);/* #333; */
+        background-position: center center;
+        -webkit-box-shadow: 2px 2px 3px 0 rgba(0,0,0,0.25);
+        -webkit-border-radius: 2px;
+    }
+
+	.AB {  }
+	.BC { -webkit-transform: rotate(90deg); }
+	.CD { -webkit-transform: rotate(180deg); }
+	.DA { -webkit-transform: rotate(270deg); }
+
+	.BA { -webkit-transform: scaleY(-1) rotate(180deg); }
+    .CB { -webkit-transform: scaleY(-1) rotate(90deg); }
+	.DC { -webkit-transform: scaleY(-1)  }
+	.AD { -webkit-transform: scaleY(-1) rotate(270deg); }
+
+</style>
+</head>
+<body>
+</body>
+</html>
+
+
+<script>
+
+var count=0;
+
+function addThumb(url, orientation)
+{
+    var e=document.createElement("div");
+    var c="cid:"+count;
+//        c="http://peekpoke.fi/peekpoke.png";
+    e.style.backgroundImage="url("+c+")";
+    e.className=orientation;
+    document.body.appendChild(e);
+    count++;
+}
+/*
+addThumb("","AB");
+addThumb("","BC");
+addThumb("","CD");
+addThumb("","DA");
+
+addThumb("","BA");
+addThumb("","CB");
+addThumb("","DC");
+addThumb("","AD");
+*/
+
+</script>
